@@ -6,6 +6,7 @@ entity Books {
   title  : localized String;
   author : Association to Authors;
   stock  : Integer;
+  texto: String;
 }
 
 entity Authors {
@@ -19,4 +20,5 @@ entity Orders : managed {
   book    : Association to Books;
   country : Country;
   amount  : Integer;
+  texto: String;
 }
