@@ -1,0 +1,25 @@
+<mvc:View controllerName="testcryptography.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text id="header1" text="Campos sem criptografia"/>
+        <Text id="lblUsuario" text="Usuário"/>
+        <Input id="ipUsuario" value="{modelLocal>/usuario}"/>
+        
+        <Text id="lblCpf" text="CPF"/>
+        <Input id="ipCpf" value="{modelLocal>/cpf}"/>
+        
+        <Text id="lblSenha" text="Senha"/>
+        <Input id="ipSenha" value="{modelLocal>/senha}"/>
+
+        <Text id="header2" text="Campos criptografados"/>
+        <Text id="lblUsuario2" text="Usuário"/>
+        <Input id="ipUsuario2" value="{modelLocal>/usuarioCriptografado}"/>
+        
+        <Text id="lblCpf2" text="CPF"/>
+        <Input id="ipCpf2" value="{modelLocal>/cpfCriptografado}"/>
+        
+        <Text id="lblSenha2" text="Senha"/>
+        <Input id="ipSenha2" value="{modelLocal>/senhaCriptografado}"/>
+    </Page>
+</mvc:View>

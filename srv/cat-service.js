@@ -33,9 +33,15 @@ module.exports = (srv) => {
     srv.after ('READ', 'Books', each => {
       if (each.stock > 111)  each.title += ' -- 11% discount!'
 
-      let textoDecriptado = decrypt(each.texto);
-      each.texto = textoDecriptado;
-
+      let textoEncriptado = encrypt(each.title);
+      let textoDecriptado;
+      if (each.title) {
+        // textoDecriptado = decrypt(each.title);
+        // each.texto = textoDecriptado;
+        each.texto = textoEncriptado;
+        textoDecriptado = decrypt(each.texto);
+        each.texto2 = textoDecriptado;
+      }
     })
   
 		const crypto = require('crypto');
